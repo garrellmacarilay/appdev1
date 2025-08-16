@@ -1,8 +1,8 @@
 # About Me
 
-**Name:** Garrell B. Macarilay
+**Name:** Garrell B. Macarilay  
 **Course/Year:** BS Information Technology 3rd Year  
-**Fun Fact:** I can sleep while sleeping.  
+**Fun Fact:** I can sleep while sitting.  
 
 ---
 
