@@ -1,5 +1,5 @@
 {
-  "name": "10_getting-started-react",
+  "name": "app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lucide-react": "^0.541.0",
+    "@tailwindcss/vite": "^4.1.12",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.542.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

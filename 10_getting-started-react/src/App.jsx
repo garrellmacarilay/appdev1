@@ -1,61 +1,113 @@
-import { User, BookOpen, Smile } from "lucide-react"
-import "./App.css"
+import React from "react";
+import "./index.css"; // keep your Tailwind import
 
-function App() {
+const App = () => {
+  const socialLinks = [
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/garrell-macarilay-a56a16300/" },
+    { label: "X", href: "#" },
+    { label: "Facebook", href: "https://www.facebook.com/garrell.macarilay" },
+    { label: "GitHub", href: "https://github.com/garrellmacarilay" },
+  ];
+
+  const navItems = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-6">
-      {/* Card */}
-      <div className="max-w-2xl w-full rounded-2xl shadow-lg border border-gray-200 bg-white p-6">
-        
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800">About Me</h1>
-        </div>
+    <div className="min-h-screen bg-gray-50 text-gray-900 relative">
+      {/* Navigation Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Profile Section */}
+            <div className="flex items-center space-x-3">
+              <img
+                src="../assets/gar.png"
+                alt="Garrell Macarilay"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <span className="font-semibold tracking-wide">
+                GARRELL MACARILAY
+              </span>
+            </div>
 
-        {/* Info Grid */}
-        <div className="space-y-4 text-gray-700">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex items-center gap-2">
-              <User className="w-5 h-5 text-blue-600" />
-              <span>
-                <strong>Name:</strong> Garrell B. Macarilay
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-green-600" />
-              <span>
-                <strong>Course/Year:</strong> BS Information Technology 3rd Year
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Smile className="w-5 h-5 text-yellow-500" />
-              <span>
-                <strong>Fun Fact:</strong> I can sleep while sitting.
-              </span>
-            </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-gray-800 hover:text-purple-600 transition-colors font-medium text-sm"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
           </div>
+        </div>
+      </header>
 
-          {/* Separator */}
-          <hr className="my-4 border-gray-300" />
+      {/* Social Media Sidebar (Desktop) */}
+      <aside className="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
+        <div className="bg-white border border-gray-200 rounded-r-lg py-4 px-2 shadow">
+          <div className="flex flex-col space-y-4">
+            {socialLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="p-2 text-gray-600 hover:text-purple-600 transition-colors rounded-md hover:bg-gray-100"
+                aria-label={label}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
 
-          {/* Why React */}
-          <div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Why I Want to Learn React
-            </h2>
-            <p className="leading-relaxed">
-              I want to learn <span className="font-semibold text-blue-600">React.js</span> 
+      {/* Main Content */}
+      <main className="pt-24 lg:pl-20">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="min-h-[80vh] flex flex-col justify-center text-center">
+            {/* Hero Section */}
+              <div className="space-y-8">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-gray-900">
+                  HEY, I'M GARRELL MACARILAY
+                </h1>
+                <h2>
+                    <strong>Course/Year:</strong> BS Information Technology 3rd Year
+                </h2>
+                <h2>
+                    <strong>Fun Fact:</strong> I can sleep while sitting.
+                </h2>
+               
+
+              <div>
+                 I want to learn <span className="font-semibold text-blue-600">React.js</span> 
               because it is one of the most commonly used front-end libraries in web development, 
               and learning it can help me build effective UI/UX. The front end is an essential 
               part of the web because it is the client side—what the users see. For users, the 
               appearance and usability matter more than the complexity or organization of the 
               backend code. That is why I am looking forward to learning this library.
-            </p>
+              </div>
+
+              <div className="pt-4">
+                <button className="px-12 py-6 text-lg font-semibold tracking-wide rounded-xl bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200">
+                  PROJECTS
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </main>
+
+      {/* Chat Widget */}
+      <div className="fixed bottom-20 right-6 z-50">
+        <button className="bg-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 hover:scale-105">
+          <span className="font-medium">Chat with me</span>
+          <span className="text-xl">👋</span>
+        </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
