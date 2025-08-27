@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.css"; // keep your Tailwind import
-import garImg from "./assets/gar.png"; // <-- import the image
+import "./index.css"; 
+import garImg from "./assets/gar.png"; 
 
 const App = () => {
   const socialLinks = [
@@ -30,7 +30,6 @@ const App = () => {
               </span>
             </div>
 
-            
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
@@ -100,7 +99,6 @@ const App = () => {
         </div>
       </main>
 
-      
       <div className="fixed bottom-20 right-6 z-50">
         <button className="bg-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 hover:scale-105">
           <span className="font-medium">Chat with me</span>
