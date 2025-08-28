@@ -11,4 +11,4 @@ const myname = "Garrell2";
 console.log(myName);
 console.log(myname);    
 
-//The variable names are case-sensitive, so myName and myname are treated as two distinct variables.
+//The variable names are case-sensitive, so myName and myname are treated as two distinct variables.1-
