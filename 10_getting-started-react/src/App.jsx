@@ -79,15 +79,14 @@ const App = () => {
                     <strong>Fun Fact:</strong> I can sleep while sitting.
                 </h2>
                
-
-              <div>
-                 I want to learn <span className="font-semibold text-blue-600">React.js</span> 
-              because it is one of the most commonly used front-end libraries in web development, 
-              and learning it can help me build effective UI/UX. The front end is an essential 
-              part of the web because it is the client side—what the users see. For users, the 
-              appearance and usability matter more than the complexity or organization of the 
-              backend code. That is why I am looking forward to learning this library.
-              </div>
+                <div>
+                    I want to learn <span className="font-semibold text-blue-600">React.js</span> 
+                  because it is one of the most commonly used front-end libraries in web development, 
+                  and learning it can help me build effective UI/UX. The front end is an essential 
+                  part of the web because it is the client side—what the users see. For users, the 
+                  appearance and usability matter more than the complexity or organization of the 
+                  backend code. That is why I am looking forward to learning this library.
+                </div>
 
               <div className="pt-4">
                 <button className="px-12 py-6 text-lg font-semibold tracking-wide rounded-xl bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200">
