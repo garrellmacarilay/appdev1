@@ -18,5 +18,7 @@ console.log(squareArrow(4));
 // function sayHi() {
 //   console.log("Hi!");
 // }
+
 const sayHiArrow = () => console.log("Hi!");
 sayHiArrow();
+
