@@ -14,7 +14,7 @@ function App() {
  
   return (
     <>
-    <h1>WELCOME TO MY PORFOLIO</h1>
+    <h1 className='title'>WELCOME TO MY PORFOLIO</h1>
       <Button/>
     </>
   )
