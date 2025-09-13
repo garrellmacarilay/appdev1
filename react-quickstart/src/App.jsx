@@ -6,7 +6,7 @@ import './App.css'
 
 function Button() {
   return (
-    <button>Click me</button>
+    <button>About Me</button>
   )
 }
 
@@ -14,6 +14,7 @@ function App() {
  
   return (
     <>
+    <h1>WELCOME TO MY PORFOLIO</h1>
       <Button/>
     </>
   )
