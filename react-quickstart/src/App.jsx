@@ -17,6 +17,16 @@ function App() {
     setIsInfoVisible(true);
   }
 
+  function CountButton(){
+    const [count, setCount] = useState(0);
+    function handleCount(){
+      setCount(count + 1);
+    }
+    return(
+      <button onClick={handleCount}>Clicked {count}</button>
+    );
+  }
+
   let content;
   if (isInfoVisible) {
     content = (
@@ -43,6 +53,7 @@ function App() {
       <h1 className='title'>WELCOME TO MY PORTFOLIO</h1>
       <button onClick={handleClick}>About Me</button>
       {content}
+      <CountButton/>
       <h2 className='subtitle'>My Rewards</h2>
       <h5>{listrewards}</h5>
     </>
