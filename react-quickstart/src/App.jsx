@@ -29,11 +29,22 @@ function App() {
     );
   }
 
+  const rewards = [{ grade: 10, award: 'With Honor', year: 2021 },
+                  { grade: 11, award: 'With Honor', year: 2022 },  
+                  { grade: 12, award: 'With Honor', year: 2023 }
+  ];
+
+  const listrewards = rewards.map((reward) =>
+    <span key={reward.id}>{`Award: ${reward.award}, Year: ${reward.year}`}<br /></span>
+  );
+
   return (
     <>
       <h1 className='title'>WELCOME TO MY PORTFOLIO</h1>
       <button onClick={handleClick}>About Me</button>
       {content}
+      <h2 className='subtitle'>My Rewards</h2>
+      <h5>{listrewards}</h5>
     </>
   );
 }
