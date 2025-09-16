@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [isInfoVisible, setIsInfoVisible] = useState(false);
+  const [count, setCount] = useState(0);
 
   const myInfo = {
     name: "Garrell Macarilay",
@@ -18,7 +19,6 @@ function App() {
   }
 
   function CountButton(){
-    const [count, setCount] = useState(0);
     function handleCount(){
       setCount(count + 1);
     }
@@ -53,8 +53,8 @@ function App() {
       <h1 className='title'>WELCOME TO MY PORTFOLIO</h1>
       <button onClick={handleClick}>About Me</button>
       {content}
-      <CountButton/>
-      <h2 className='subtitle'>My Rewards</h2>
+      <CountButton count={count} onClick={handleClick}/>
+      <CountButton count={count} onClick={handleClick}/>
       <h5>{listrewards}</h5>
     </>
   );
