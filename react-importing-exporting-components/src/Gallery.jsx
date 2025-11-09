@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Profile() {
+export function Profile() {
   return (
     <img
       src="https://i.imgur.com/QIrZWGIs.jpg"
@@ -9,11 +9,15 @@ function Profile() {
   );
 }
 
-
-
 export default function Gallery() {
   return (
-    <div>Gallery</div>
+    <section>
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
+    </section>
+
   )
 }
 
