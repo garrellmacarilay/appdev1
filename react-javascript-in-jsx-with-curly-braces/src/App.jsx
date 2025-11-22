@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import TodoList from './TodoList';
 
 function Avatar() {
   const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <TodoList />
       <Avatar />
     </>
   )
