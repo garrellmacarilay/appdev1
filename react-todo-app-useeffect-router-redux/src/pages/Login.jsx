@@ -1,17 +1,16 @@
-import React from 'react'
-import {useState, useEffect} from "react";
+import { useEffect, useState } from "react";
 
-function Login() {
-    const [username, seUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [user, setUser] = useState([]);
+function Login () {
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [users, setUsers] = useState([])
 
-    const SECRET = import.meta.env.VITE_APP_SECRET_PASSWORD;
-    
+    const SECRET = import.meta.env.VITE_APP_SECRET_PASSWORD
+
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users?_limit=2")
+        fetch("https://jsonplaceholder.typicode.com/users?_limit=5")
         .then(response => response.json())
-        .then(data => setUsers(data))
+        .then(users => setUsers(users))
     }, [])
 
      function handleLogin() {
@@ -38,7 +37,7 @@ function Login() {
         <div>
             <h2>Login</h2>
 
-            <input type="text" placeholder="Enter username (E.g., Bret)" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" placeholder="Enter username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <br />
             <input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <br />

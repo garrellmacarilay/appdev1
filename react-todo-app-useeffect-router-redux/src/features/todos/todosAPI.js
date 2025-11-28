@@ -1,7 +1,5 @@
-import React from 'react'
-
 export const getTodosAPI = function () {
-    return fetch(`https://jsonplaceholder.typicode.com/todos?_limit=10`)
+    return fetch(`https://jsonplaceholder.typicode.com/todos?_limit=5`)
     .then(res => res.json())
 }
 
