@@ -22,21 +22,11 @@ export const updateTodoAPI = function(todo){
     })
     .then(res => res.json())
 }
-export const deleteAPI = function(id){
-    return fetch (`https://jsonplaceholder.typicode.com/todos/${id}`, {
-    method:"DELETE"
-    }.then(()=>id)
+export const deleteTodoAPI = function(id) {
+    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+        method: "DELETE"
+    })
+    .then(() => id)
 }
 
 
-
-function todosAPI() {
-
-  return (
-    <>
-    
-    </>
-  )
-}
-
-export default todosAPI
