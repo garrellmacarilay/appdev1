@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"
 import Login from "./pages/Login"
-import Todos from "./pages/Todos"
+import Todos from "./pages/Todos.jsx"
 
 import './App.css'
 
