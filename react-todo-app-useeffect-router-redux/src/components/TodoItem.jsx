@@ -23,5 +23,4 @@ function TodoItem ({todo}) {
         </li>
     </>
   )
-
 }
