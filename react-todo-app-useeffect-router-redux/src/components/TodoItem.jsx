@@ -45,7 +45,7 @@ function TodoItem ({todo}) {
           <div className="flex-shrink-0">
             <div className="h-8 w-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
               <span className="text-xs font-semibold text-white">
-                {todo.name ? todo.name.charAt(0).toUpperCase() : 'U'}
+                {todo.id}
               </span>
             </div>
           </div>
@@ -57,16 +57,9 @@ function TodoItem ({todo}) {
                 ? 'text-gray-500 line-through' 
                 : 'text-gray-900'
             }`}>
-              {todo.name || 'Unknown User'}
+              {todo.title || 'Unknown Title'}
             </p>
-            <p className="text-xs text-gray-500 truncate">
-              {todo.email || 'No email'} • {todo.phone || 'No phone'}
-            </p>
-            {todo.company && (
-              <p className="text-xs text-blue-600 font-medium">
-                {todo.company.name}
-              </p>
-            )}
+            
           </div>
         </div>
       </div>
