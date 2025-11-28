@@ -37,7 +37,7 @@ function Todos() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 bg-green-100 px-3 py-1 rounded-full">
                 <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium text-green-800">{todos.length} Users</span>
+                <span className="text-sm font-medium text-green-800">{todos.length} Todos</span>
               </div>
               <button 
                 onClick={() => {
