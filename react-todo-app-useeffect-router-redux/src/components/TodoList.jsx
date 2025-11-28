@@ -4,13 +4,13 @@ import TodoItem from "./TodoItem";
 
 function TodoList({todos}) {
   return (
-    <>
-         <ul>
-            {todos.map((todo) => (
-                <TodoItem key={todo.id} todo={todo} />
-            ))}
-        </ul>
-    </>
+    <div className="space-y-3">
+      {todos.map((todo, index) => (
+        <div key={todo.id} className="animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+          <TodoItem todo={todo} />
+        </div>
+      ))}
+    </div>
   )
 }
 
